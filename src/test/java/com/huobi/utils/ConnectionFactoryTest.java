@@ -1,5 +1,6 @@
 package com.huobi.utils;
 
+import com.huobi.exception.SDKException;
 import okhttp3.Request;
 import okhttp3.WebSocket;
 import okhttp3.WebSocketListener;
@@ -10,10 +11,8 @@ import org.junit.runner.RunWith;
 import org.powermock.core.classloader.annotations.PowerMockIgnore;
 import org.powermock.modules.junit4.PowerMockRunner;
 
-import com.huobi.exception.SDKException;
-
 @RunWith(PowerMockRunner.class)
-@PowerMockIgnore({"okhttp3.*"})
+@PowerMockIgnore({"okhttp3.*", "javax.xml.*", "org.xml.*", "com.sun.org.apache.xerces.*"})
 public class ConnectionFactoryTest {
 
   @Before
@@ -26,7 +25,7 @@ public class ConnectionFactoryTest {
   public void execute_test() {
 
     // 测试正常请求
-    String url = "http://api.huobi.vn/market/history/kline?period=1min&size=2&symbol=htusdt";
+    String url = "https://api.huobi.pro/market/history/kline?period=1min&size=2&symbol=htusdt";
     Request executeRequest = new Request.Builder()
         .url(url)
         .addHeader("Content-Type", "application/x-www-form-urlencoded")
@@ -38,7 +37,7 @@ public class ConnectionFactoryTest {
     Assert.assertTrue(str.length() > 0);
 
     // 测试访问状态异常捕获
-    String url1 = "http://api.huobi.vn/market/notfund";
+    String url1 = "https://api.huobi.pro/market/notfund";
     Request executeRequest1 = new Request.Builder()
         .url(url1)
         .addHeader("Content-Type", "application/x-www-form-urlencoded")
