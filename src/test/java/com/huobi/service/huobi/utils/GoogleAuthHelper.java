@@ -1,10 +1,9 @@
 package com.huobi.service.huobi.utils;
 
-import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
-
 import com.warrenstrange.googleauth.GoogleAuthenticator;
 import com.warrenstrange.googleauth.GoogleAuthenticatorKey;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class GoogleAuthHelper {
   /**
