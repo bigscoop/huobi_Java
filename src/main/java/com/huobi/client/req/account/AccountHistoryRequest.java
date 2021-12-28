@@ -1,15 +1,13 @@
 package com.huobi.client.req.account;
 
+import com.huobi.constant.enums.AccountHistoryTransactTypeEnum;
+import com.huobi.constant.enums.QuerySortEnum;
 import java.util.List;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.apache.commons.lang.StringUtils;
-
-import com.huobi.constant.enums.QuerySortEnum;
-import com.huobi.constant.enums.AccountHistoryTransactTypeEnum;
+import org.apache.commons.lang3.StringUtils;
 
 @Data
 @Builder

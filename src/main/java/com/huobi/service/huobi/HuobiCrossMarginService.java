@@ -1,11 +1,7 @@
 package com.huobi.service.huobi;
 
-import java.util.List;
-
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import org.apache.commons.lang.StringUtils;
-
 import com.huobi.client.CrossMarginClient;
 import com.huobi.client.req.crossmargin.CrossMarginApplyLoanRequest;
 import com.huobi.client.req.crossmargin.CrossMarginLoanOrdersRequest;
@@ -28,6 +24,8 @@ import com.huobi.service.huobi.parser.crossmargin.CrossMarginCurrencyInfoParser;
 import com.huobi.service.huobi.parser.crossmargin.CrossMarginLoadOrderParser;
 import com.huobi.service.huobi.signature.UrlParamsBuilder;
 import com.huobi.utils.InputChecker;
+import java.util.List;
+import org.apache.commons.lang3.StringUtils;
 
 public class HuobiCrossMarginService implements CrossMarginClient {
 

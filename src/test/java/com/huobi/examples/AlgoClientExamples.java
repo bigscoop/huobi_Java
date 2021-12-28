@@ -1,11 +1,5 @@
 package com.huobi.examples;
 
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
-
-import org.apache.commons.lang.RandomStringUtils;
-
 import com.huobi.Constants;
 import com.huobi.client.AlgoClient;
 import com.huobi.client.req.algo.CancelAlgoOrderRequest;
@@ -22,6 +16,10 @@ import com.huobi.model.algo.CancelAlgoOrderResult;
 import com.huobi.model.algo.CreateAlgoOrderResult;
 import com.huobi.model.algo.GetHistoryAlgoOrdersResult;
 import com.huobi.model.algo.GetOpenAlgoOrdersResult;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
+import org.apache.commons.lang3.RandomStringUtils;
 
 public class AlgoClientExamples {
 
